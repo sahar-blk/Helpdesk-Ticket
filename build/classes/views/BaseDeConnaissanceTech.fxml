@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BaseDeConnaissanceTechController">
+     <stylesheets>
+        <URL value="@dashbordadmin.css" />
+      
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="border" prefHeight="500.0" prefWidth="700.0">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableticket" layoutX="14.0" layoutY="95.0" prefHeight="378.0" prefWidth="678.0">
+                    <columns>
+                      <TableColumn fx:id="description" prefWidth="166.39999103546143" text="Description" />
+                        <TableColumn fx:id="priorite" prefWidth="85.59999084472656" text="Priorité" />
+                        <TableColumn fx:id="datecreation" minWidth="7.199951171875" prefWidth="130.39996337890625" text="Date Création" />
+                        <TableColumn fx:id="datecloture" prefWidth="112.79998779296875" text="Date Cloture" />
+                        <TableColumn fx:id="responsable" prefWidth="95.20001220703125" text="Résponsable" />
+                        <TableColumn fx:id="solution" prefWidth="86.39999999999998" text="Solution" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="83.0" layoutY="46.0" prefHeight="30.0" prefWidth="195.0" styleClass="labbtn" text="Base de Connaissance" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="47.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/inbox.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

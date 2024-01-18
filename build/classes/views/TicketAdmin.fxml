@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TicketAdminController">
+   <stylesheets>
+        <URL value="@dashbordadmin.css" />
+      
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="border" prefHeight="500.0" prefWidth="700.0">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableticket" layoutX="47.0" layoutY="96.0" prefHeight="200.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="idCol" prefWidth="44.799957275390625" text="id" />
+                      <TableColumn fx:id="description" prefWidth="198.40001678466797" text="Description" />
+                        <TableColumn fx:id="priorite" prefWidth="100.0" text="Priorité" />
+                        <TableColumn fx:id="datecreation" minWidth="7.199951171875" prefWidth="120.0" text="Date Création" />
+                        <TableColumn fx:id="etat" prefWidth="73.60000610351562" text="Etat" />
+                        <TableColumn fx:id="responsable" prefWidth="92.800048828125" text="Résponsable" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="46.0" prefHeight="30.0" prefWidth="195.0" styleClass="labbtn" text="Liste des tickets non cloturés" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="47.0" layoutY="304.0" prefHeight="168.0" prefWidth="626.0" style="-fx-border-color: #AEB2C3;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="24.0" layoutY="13.0" prefHeight="30.0" prefWidth="87.0" styleClass="labbtn" text="Le problème">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="436.0" layoutY="13.0" prefHeight="30.0" prefWidth="90.0" styleClass="labbtn" text="Problème de">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="269.0" layoutY="14.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Priorité">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="473.0" layoutY="129.0" mnemonicParsing="false" onAction="#Add" text="Ajouter" />
+                        <Button layoutX="540.0" layoutY="129.0" mnemonicParsing="false" onAction="#Delete" text="Supprimer" />
+                        <TextArea fx:id="Description" layoutX="24.0" layoutY="42.0" prefHeight="55.0" prefWidth="238.0" />
+                        <ComboBox fx:id="prioriteform" layoutX="274.0" layoutY="42.0" prefWidth="150.0" />
+                        <ComboBox fx:id="groupeliste" layoutX="438.0" layoutY="42.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="47.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-ticket-64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

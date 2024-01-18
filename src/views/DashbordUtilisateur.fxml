@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashbordUtilisateurController">
+  <stylesheets>
+        <URL value="@dashbordadmin.css" />
+      
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="border" prefHeight="500.0" prefWidth="700.0">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="105.0" prefHeight="90.0" prefWidth="303.0" style="-fx-border-radius: 0px 50px 0px 0px; -fx-border-color: #AEB2C3;">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.7176470756530762" green="0.7372549176216125" blue="0.7372549176216125" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutX="104.0" layoutY="28.0" prefHeight="30.0" prefWidth="86.0" styleClass="labbtn" text="Tickets " textFill="#2262c6">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbrusers" layoutX="102.0" layoutY="35.0" text="5" textFill="#2262c6">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="37.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-ticket-64.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="361.0" layoutY="105.0" prefHeight="90.0" prefWidth="285.0" style="-fx-border-radius: 0px 50px 0px 0px; -fx-border-color: #AEB2C3;">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.7176470756530762" green="0.7372549176216125" blue="0.7372549176216125" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutX="96.0" layoutY="29.0" prefHeight="30.0" prefWidth="182.0" styleClass="labbtn" text="Tickets en cours de traitement" textFill="#2262c6">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbrtechnicien" layoutX="81.0" layoutY="36.0" text="6" textFill="#2262c6">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="21.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-working-96.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                    <TableView fx:id="tableticket" layoutX="24.0" layoutY="276.0" prefHeight="200.0" prefWidth="399.0">
+                    <columns>
+                      <TableColumn fx:id="description" prefWidth="185.60004425048828" text="Description" />
+                        <TableColumn fx:id="priorite" prefWidth="90.39996337890625" text="Priorité" />
+                        <TableColumn fx:id="responsable" prefWidth="123.20001220703125" text="Résponsable" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="63.0" layoutY="235.0" prefHeight="30.0" prefWidth="191.0" styleClass="labbtn" text="Tickets ajoutés aujourd'hui" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="24.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-today-48.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="447.0" layoutY="276.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #AEB2C3;">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="110.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="prenom" layoutX="55.0" layoutY="100.0" prefHeight="18.0" prefWidth="72.0" text="MOLKA">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="128.0" text="TEL:">
+                           <font>
+                              <Font name="Calibri" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tel" layoutX="62.0" layoutY="128.0" text="55056554" />
+                        <Label layoutX="19.0" layoutY="146.0" prefHeight="18.0" prefWidth="46.0" text="EMAIL:" />
+                        <Label fx:id="mail" layoutX="61.0" layoutY="146.0" text="molkaattia3@gmail.com" />
+                        <Label layoutX="19.0" layoutY="168.0" prefHeight="18.0" prefWidth="86.0" text="Département:" />
+                        <Label fx:id="dep" layoutX="112.0" layoutY="168.0" text="Réseau" />
+                        <Label fx:id="nom" layoutX="113.0" layoutY="100.0" prefHeight="18.0" prefWidth="86.0" text="ATTIA ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

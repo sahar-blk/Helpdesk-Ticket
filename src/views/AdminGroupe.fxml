@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminGroupeController">
+  <stylesheets>
+        <URL value="@dashbordadmin.css" />
+      
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="border" prefHeight="500.0" prefWidth="700.0">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="46.0" prefHeight="30.0" prefWidth="86.0" styleClass="labbtn" text="Groupes" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="47.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-team-48.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="62.0" layoutY="110.0" prefHeight="30.0" prefWidth="86.0" styleClass="labbtn" text="Software" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="403.0" layoutY="109.0" prefHeight="30.0" prefWidth="86.0" styleClass="labbtn" text="Hardware" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="software" layoutX="38.0" layoutY="150.0" prefHeight="316.0" prefWidth="296.0">
+                    <columns>
+                      <TableColumn fx:id="noms" prefWidth="75.0" text="Nom" />
+                      <TableColumn fx:id="prenoms" prefWidth="75.0" text="Prenom" />
+                        <TableColumn fx:id="tels" prefWidth="75.0" text="Tel" />
+                        <TableColumn fx:id="emails" prefWidth="75.0" text="Email" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="hardware" layoutX="374.0" layoutY="150.0" prefHeight="316.0" prefWidth="296.0">
+                     <columns>
+                        <TableColumn fx:id="nomh" prefWidth="75.0" text="Nom" />
+                        <TableColumn fx:id="prenomh" prefWidth="75.0" text="Prenom" />
+                        <TableColumn fx:id="telh" prefWidth="75.0" text="Tel" />
+                        <TableColumn fx:id="emailh" prefWidth="75.0" text="Email" />
+                     </columns>
+                  </TableView>
+                  <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="39.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-software-100.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="58.0" layoutX="374.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-hardware-100.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminTechnicienController">
+   <stylesheets>
+        <URL value="@dashbordadmin.css" />
+      
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="border" prefHeight="500.0" prefWidth="700.0">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableuser" layoutX="47.0" layoutY="96.0" prefHeight="200.0" prefWidth="630.0">
+                    <columns>
+                      <TableColumn fx:id="idCol" prefWidth="75.0" text="id" />
+                      <TableColumn fx:id="nom" prefWidth="69.60004425048828" text="Nom" />
+                        <TableColumn fx:id="prenom" prefWidth="98.4000244140625" text="Prenom" />
+                        <TableColumn fx:id="email" minWidth="7.199951171875" prefWidth="116.79998779296875" text="Email" />
+                        <TableColumn fx:id="tel" prefWidth="169.59988403320312" text="tel" />
+                        <TableColumn fx:id="poste" minWidth="0.0" prefWidth="100.0001220703125" text="Poste" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="46.0" prefHeight="30.0" prefWidth="86.0" styleClass="labbtn" text="Techniciens" textFill="#2262c6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="groupelist" layoutX="47.0" layoutY="304.0" prefHeight="168.0" prefWidth="626.0" style="-fx-border-color: #AEB2C3;">
+                     <children>
+                        <TextField fx:id="Nom" layoutX="73.0" layoutY="15.0" prefWidth="120.0" />
+                        <TextField fx:id="Prenom" layoutX="75.0" layoutY="54.0" prefWidth="120.0" />
+                        <TextField fx:id="Poste" layoutX="75.0" layoutY="93.0" prefWidth="120.0" />
+                        <TextField fx:id="Email" layoutX="269.0" layoutY="18.0" prefHeight="26.0" prefWidth="153.0" />
+                        <TextField fx:id="Tel" layoutX="269.0" layoutY="55.0" prefHeight="26.0" prefWidth="153.0" />
+                        <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Nom">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="7.0" layoutY="52.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Prènom">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="3.0" layoutY="90.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Poste">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="203.0" layoutY="16.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Email">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="203.0" layoutY="92.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Mdp">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="203.0" layoutY="52.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Tel">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnajouter" layoutX="397.0" layoutY="129.0" mnemonicParsing="false" onAction="#Add" text="Ajouter" />
+                        <Button fx:id="btnmodifier" layoutX="465.0" layoutY="129.0" mnemonicParsing="false" onAction="#Update" text="Modifier" />
+                        <Button layoutX="540.0" layoutY="129.0" mnemonicParsing="false" onAction="#Delete" text="Supprimer" />
+                        <PasswordField fx:id="Mdp" layoutX="271.0" layoutY="94.0" />
+                        <ComboBox fx:id="groupecombo" layoutX="451.0" layoutY="42.0" prefWidth="150.0" />
+                        <Label alignment="CENTER" layoutX="452.0" layoutY="12.0" prefHeight="30.0" prefWidth="66.0" styleClass="labbtn" text="Groupe">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="47.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-mechanic-skin-type-1-48.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
